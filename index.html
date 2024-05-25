@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <form class="form" novalidate>
+      <h2 class="title">Sign Up</h2>
+      <label for="email" class="email-label">
+        <span class="email-msg">Email: </span>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Type your email address"
+          minlength="10"
+        />
+        <span class="error">Email is not correct.</span>
+      </label>
+
+      <label for="password" class="password-label">
+        <span class="password-msg">Password: </span>
+        <input
+          type="password"
+          id="password"
+          required
+          minlength="10"
+          placeholder="Password should have at least 10 characters"
+        />
+        <span class="priority active">
+          <span class="low low-priority"></span>
+          <span class="high"></span>
+        </span>
+        <span class="priority-text"
+          >Your password is too week. Your password should have digits and
+          characters between A-z. Also your minimal length of password should be
+          10 character.</span
+        >
+      </label>
+
+      <label for="password-cfm" class="password-cfm-label">
+        <span class="password-cfm-msg">Password confirm: </span>
+        <input
+          type="password"
+          id="password-cfm"
+          required
+          placeholder="Confirm password"
+          minlength="10"
+        />
+        <span class="error"></span>
+      </label>
+
+      <h2 class="title">Zip Code / Country</h2>
+      <label for="zip" class="zip-label">
+        <span class="zip-msg">Zip Code:</span>
+        <input type="text" id="zip" required placeholder="ZIP" />
+        <span class="error"></span>
+      </label>
+
+      <label for="country" class="country-label">Country: </label>
+      <select name="" id="country">
+        <option value="ch">Switzerland</option>
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+        <option value="nl">The Netherlands</option>
+      </select>
+
+      <button class="submit">Submit</button>
+    </form>
+  </body>
+</html>
